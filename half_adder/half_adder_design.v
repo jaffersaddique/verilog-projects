@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 22.01.2026 21:56:35
+// Create Date: 13.02.2026 20:38:50
 // Design Name: 
-// Module Name: half_adder
+// Module Name: half_adder_design
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,42 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
- module half_adder(
+module half_adder_design(
     input a,
     input b,
     output sum,
-    output cout
+    output carry
     );
-    assign sum= a^b;
-    assign cout= a&b;
+    assign sum=a^b;
+    assign carry=a&b;
 endmodule
-
-
-module half_adder_tb;
-   reg a;
-   reg b;
-   wire sum;
-   wire cout;
-      
-      
-      half_adder uut(
-      .a(a),
-      .b(b),
-      .sum(sum),
-      .cout(cout));
-      
-          initial 
-              begin
-                  a=0; b=0;
-                  #3;
-                  a=0; b=1;
-                  #3;
-                  a=1; b=0;
-                  #3;
-                  a=1; b=1;
-                  #3;
-                  $finish;
-               end
-endmodule
-                  
-      
