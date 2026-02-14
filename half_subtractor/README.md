@@ -1,3 +1,5 @@
+**NOTE: please view in code or raw format**
+
 INTRODUCTION:
 
 A half subtractor is a digital logic circuit that subtracts two single bit binary numbers and produces outputs as Difference and Borrow.
