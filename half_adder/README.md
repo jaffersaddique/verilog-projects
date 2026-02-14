@@ -60,7 +60,6 @@ reg b;
 wire sum;
 wire cout;
 
-
 half_adder uut(.a(a),.b(b),.sum(sum),.cout(cout));
 
 initial
