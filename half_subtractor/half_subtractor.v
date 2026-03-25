@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 14.02.2026 21:35:22
+// Create Date: 14.02.2026 21:46:36
 // Design Name: 
-// Module Name: half subtractor_tb
+// Module Name: half_subtractor
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,13 +19,24 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+module half_subtractor(
+    input a,
+    input b,
+    output diff,
+    output borrow
+    );
+    assign diff=a^b;
+    assign borrow=!a&b;
+endmodule
+
 module half_subtractor_tb;
 reg a;
 reg b;
 wire diff;
 wire borrow;
 
-half_subtractor_design uut (
+half_subtractor uut (
     .a(a),
     .b(b),
     .diff(diff),
@@ -40,4 +51,3 @@ initial begin
     $finish;
     end
 endmodule
-
